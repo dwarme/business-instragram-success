@@ -1,4 +1,5 @@
 export type IUserRole = 'USER' | 'ADMIN'
+type IOmitThis = "id" | "password" | "brandId" | "brandStoryId" | "brandStatId" | "createdAt" | "updatedAt"
 export interface IUser {
     id: string;
     createdAt: Date;
@@ -28,16 +29,18 @@ export interface IBrand {
     region: string;
 }
 export interface IBrandListing extends IBrand {}
-export interface IBrandCreateInput extends Omit<IBrand, "id" | "createdAt" | "updatedAt"> {}
+export interface IBrandCreateInput extends Omit<IBrand, IOmitThis> {}
 export interface ICreative {
     id: string;
     brandId: string;
     createdAt: Date;
     updatedAt: Date;
     title: string;
+    subtitle: string;
+    imageUrl: string;
 }
 export interface ICreativeListing extends ICreative {}
-export interface ICreativeCreateInput extends Omit<ICreative, "id"> {}
+export interface ICreativeCreateInput extends Omit<ICreative, IOmitThis> {}
 export interface IBrandStory {
     id: string;
     brandId: string;
@@ -47,7 +50,7 @@ export interface IBrandStory {
     noteReference: string; 
 }
 export interface IBrandStoryListing extends IBrandStory {}
-export interface IBrandStoryCreateInput extends Omit<IBrandStory, "id"> {}
+export interface IBrandStoryCreateInput extends Omit<IBrandStory, IOmitThis> {}
 export interface IBrandStat {
     id: string;
     brandStoryId: string;
@@ -55,7 +58,7 @@ export interface IBrandStat {
     description: string;
 }
 export interface IBrandStatListing extends IBrandStat {}
-export interface IBrandStatCreateInput extends Omit<IBrandStat, "id"> {}
+export interface IBrandStatCreateInput extends Omit<IBrandStat, IOmitThis> {}
 export interface IBrandGoal {
     id: string;
     brandId: string;
@@ -65,7 +68,7 @@ export interface IBrandGoal {
     noteReference: string;
 }
 export interface IBrandGoalListing extends IBrandGoal {}
-export interface IBrandGoalCreateInput extends Omit<IBrandGoal, "id"> {}
+export interface IBrandGoalCreateInput extends Omit<IBrandGoal, IOmitThis> {}
 export interface IBrandSolution {
     id: string;
     brandId: string;
@@ -77,4 +80,4 @@ export interface IBrandSolution {
     videoUrl?: string;
 }
 export interface IBrandSolutionListing extends IBrandSolution {}
-export interface IBrandSolutionCreateInput extends Omit<IBrandSolution, "id"> {}
+export interface IBrandSolutionCreateInput extends Omit<IBrandSolution, IOmitThis> {}
