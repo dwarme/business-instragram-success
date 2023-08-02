@@ -10,7 +10,10 @@ export interface IUser {
     lastName: string;
     role: IUserRole;
 }
-export interface IUserListing extends Omit<IUser, "password"> {}
+export interface IUserListing extends Omit<IUser, "password" | "createdAt" | "updatedAt"> { 
+    createdAt: string; 
+    updatedAt: string 
+}
 export interface IUserCreateInput extends Omit<IUser, "id" | "createdAt" | "updatedAt"> {}
 export interface IBrand {
     id: string;
@@ -28,7 +31,10 @@ export interface IBrand {
     industry: string;
     region: string;
 }
-export interface IBrandListing extends IBrand {}
+export interface IBrandListing extends Omit<IBrand, "createdAt" | "updatedAt"> { 
+    createdAt: string; 
+    updatedAt: string 
+}
 export interface IBrandCreateInput extends Omit<IBrand, IOmitThis> {}
 export interface ICreative {
     id: string;
@@ -39,7 +45,10 @@ export interface ICreative {
     subtitle: string;
     imageUrl: string;
 }
-export interface ICreativeListing extends ICreative {}
+export interface ICreativeListing extends Omit<ICreative,  "createdAt" | "updatedAt"> { 
+    createdAt: string; 
+    updatedAt: string 
+}
 export interface ICreativeCreateInput extends Omit<ICreative, IOmitThis> {}
 export interface IBrandStory {
     id: string;

@@ -29,15 +29,16 @@ model Creative {
   title     String
   subtitle  String
   imageUrl  String
+  brand     Brand    @relation(fields: [brandId], references: [id])
 }
 
 model Brand {
-  id              String   @id @default(uuid())
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id              String           @id @default(uuid())
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
   name            String
-  handle          String   @unique
-  username        String   @unique
+  handle          String           @unique
+  username        String           @unique
   profileImageUrl String
   coverImageUrl   String
   about           String
@@ -46,6 +47,11 @@ model Brand {
   product         String
   industry        String
   region          String
+  Creative        Creative[]
+  BrandStory      BrandStory[]
+  BrandGoal       BrandGoal[]
+  BrandSolution   BrandSolution[]
+  BrandStoryStat  BrandStoryStat[]
 }
 
 model BrandStory {
@@ -55,6 +61,7 @@ model BrandStory {
   description   String
   note          String
   noteReference String // The author of the note
+  brand         Brand  @relation(fields: [brandId], references: [id], onDelete: Cascade)
 }
 
 model BrandStoryStat {
@@ -62,6 +69,7 @@ model BrandStoryStat {
   brandStoryId String
   title        String
   description  String
+  brand        Brand  @relation(fields: [brandStoryId], references: [id], onDelete: Cascade)
 }
 
 model BrandGoal {
@@ -71,6 +79,7 @@ model BrandGoal {
   description   String
   note          String // The author of the note
   noteReference String
+  brand         Brand  @relation(fields: [brandId], references: [id], onDelete: Cascade)
 }
 
 model BrandSolution {
@@ -82,4 +91,5 @@ model BrandSolution {
   creativeType     String //Story or Feed
   imageUrl         String?
   videoUrl         String?
+  brand            Brand   @relation(fields: [brandId], references: [id], onDelete: Cascade)
 }
