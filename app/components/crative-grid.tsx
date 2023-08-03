@@ -10,7 +10,7 @@ const CreativeGrid: React.FC<{
   const [creatives, setCreatives] = useState(initCreatives);
   const fetcher = useFetcher();
 
-  function fetchMoreProducts() {
+  function fetchMoreCreatives() {
     fetcher.load(`/success?index&cursor=${nextPage}`);
   }
 
@@ -46,7 +46,7 @@ const CreativeGrid: React.FC<{
                 <button
                   value="1"
                   className="_42ft _f4m"
-                  onClick={fetchMoreProducts}
+                  onClick={fetchMoreCreatives}
                   disabled={fetcher.state !== "idle"}
                 >
                   Load more
