@@ -83,10 +83,10 @@ export interface IBrandSolution {
     brandId: string;
     title: string;
     contentHtml: string;
-    mediaContentType: "IMAGE" | "VIDEO";
-    creativeType: "STORY" | "FEED";
-    imageUrl?: string;
-    videoUrl?: string;
+    mediaContentType: string;
+    creativeType: string;
+    imageUrl: string | null;
+    videoUrl: string | null;
 }
 export interface IBrandSolutionListing extends IBrandSolution {}
 export interface IBrandSolutionCreateInput extends Omit<IBrandSolution, IOmitThis> {}
