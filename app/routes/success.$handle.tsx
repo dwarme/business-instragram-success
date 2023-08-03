@@ -45,8 +45,7 @@ export async function loader({ params }: LoaderArgs) {
 
 export default function CaseStudyRoute() {
   const { brand } = useLoaderData<typeof loader>();
-  console.log(brand.story);
-  console.log(brand);
+
   return (
     <main role="main">
       <div className="_2noi">
