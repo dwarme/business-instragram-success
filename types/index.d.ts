@@ -90,3 +90,8 @@ export interface IBrandSolution {
 }
 export interface IBrandSolutionListing extends IBrandSolution {}
 export interface IBrandSolutionCreateInput extends Omit<IBrandSolution, IOmitThis> {}
+export interface ICreativeFilter {
+    title: string;
+    name: string;
+    values: string[];
+}
