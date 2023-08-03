@@ -1,6 +1,6 @@
 import React from "react";
 import FilterCard from "./filter-card";
-import { IBrandListing } from "types";
+import creativeFilters from "resources/creative-filters";
 
 const FilterGrid: React.FC = () => {
   return (
@@ -18,8 +18,9 @@ const FilterGrid: React.FC = () => {
             <div className="_4mhj"></div>
           </div>
           <div className="_4mhe">
-            <FilterCard />
-            <FilterCard />
+            {creativeFilters.map((filter) => (
+              <FilterCard key={filter.name} filter={filter} />
+            ))}
           </div>
         </div>
         <div className="_4mhg"></div>
