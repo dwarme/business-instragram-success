@@ -18,14 +18,6 @@ export async function loader({ params }: LoaderArgs) {
 
   const story = await prisma.brandStory.findFirst({
     where: { brandId: brandInfo.id },
-    select: {
-      id: true,
-      brandId: true,
-      title: true,
-      description: true,
-      note: true,
-      noteReference: true,
-    },
   });
 
   const goal = await prisma.brandGoal.findFirst({
