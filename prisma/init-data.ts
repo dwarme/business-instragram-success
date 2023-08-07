@@ -97,7 +97,7 @@ export const initBrandsData: {
         mediaContentType: "IMAGE",
         creativeType: "FEED",
         imageUrl:
-          "https://scontent-mxp2-1.xx.fbcdn.net/v/t39.8562-6/342208166_232326462712736_3432463526407629652_n.jpg?stp=dst-webp&_nc_cat=104&ccb=1-7&_nc_sid=743b2f&_nc_ohc=4iWelyH7qSUAX8mhf5j&_nc_ht=scontent-mxp2-1.xx&oh=00_AfCj5mk0SYou7H59ew7YqESIsXRbLF9xupHVg1RkAT5P3Q&oe=64CE3C3E",
+          "https://scontent.fmxp6-1.fna.fbcdn.net/v/t39.8562-6/342208166_232326462712736_3432463526407629652_n.jpg?stp=dst-webp&_nc_cat=104&ccb=1-7&_nc_sid=743b2f&_nc_ohc=jlT2gNXsKCQAX93wNps&_nc_ht=scontent.fmxp6-1.fna&oh=00_AfBsSFbE4gfqVTJK4BZmUDhap9tmGXEOaYm2adYj3bSlhA&oe=64D6253E",
         videoUrl: "",
       },
     ],

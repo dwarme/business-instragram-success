@@ -1,17 +1,23 @@
 import React from "react";
+import { IBrandSolutionListing, ICreativeListing } from "types";
 
-const BrandSolutionCreative: React.FC = () => {
+const BrandSolutionCreative: React.FC<{ data: IBrandSolutionListing }> = ({
+  data,
+}) => {
   return (
     <div className="_4mdd _1slv _6g1k">
       <div className="__sw __sz __t3 __ta">
         <div className="_5k8 _8-l5">
           <div className="_7jam _2q_m pts">
-            <div style={{width: '91%', height: '91%'}} className="_7jan _4sea _4seb">
-              <div
-                className="_2s8m _3fcf _6z_p _7jap _21op _7jap _21op"
-              >
+            <div
+              style={{ width: "91%", height: "91%" }}
+              className="_7jan _4sea _4seb"
+            >
+              <div className="_2s8m _3fcf _6z_p _7jap _21op _7jap _21op">
                 <div
-                  style={{backgroundImage: `url(https://scontent.fmxp6-1.fna.fbcdn.net/v/t39.8562-6/342208166_232326462712736_3432463526407629652_n.jpg?stp=dst-webp&_nc_cat=104&ccb=1-7&_nc_sid=743b2f&_nc_ohc=4iWelyH7qSUAX_SfMlC&_nc_ht=scontent.fmxp6-1.fna&oh=00_AfB3kzbO3dei2gIfnJXmVmQOH2ZXF6A4I33gYXLLO599ZQ&oe=64D0367E)`}}
+                  style={{
+                    backgroundImage: `url(${data.imageUrl})`,
+                  }}
                   className="_3fcf _2s8n _3gnj _2s93"
                 ></div>
               </div>
