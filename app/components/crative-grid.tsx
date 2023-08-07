@@ -7,11 +7,11 @@ const CreativeGrid: React.FC<{
   creatives: (ICreativeListing & { brand: IBrandListing })[];
 }> = ({ creatives: initCreatives }) => {
   const [nextPage, setNexPage] = useState<number>(2);
-  const [creatives, setCreatives] = useState(initCreatives);
+  const [creatives, setCreatives] = useState<typeof initCreatives>([]);
   const fetcher = useFetcher();
 
   function fetchMoreCreatives() {
-    fetcher.load(`/success?index&cursor=${nextPage}`);
+    fetcher.load(`/?index&cursor=${nextPage}`);
   }
 
   useEffect(() => {
@@ -26,6 +26,11 @@ const CreativeGrid: React.FC<{
       setNexPage(-1);
     }
   }, [fetcher.data]);
+
+  useEffect(() => {
+    setCreatives(initCreatives);
+    setNexPage(initCreatives.length > 0 ? 2 : -1);
+  }, [initCreatives]);
 
   return (
     <React.Fragment>

@@ -68,7 +68,7 @@ const creativeFilters: ICreativeFilter[] = [
   },
   {
     title: "Business size",
-    name: "business-size",
+    name: "businessSize",
     values: ["Agency and partners", "Brand", "Small business"],
   },
 ];

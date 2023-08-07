@@ -1,5 +1,4 @@
 /* eslint-disable hydrogen/prefer-image-component */
-
 const Navbar: React.FC = () => {
   return (
     <div
@@ -69,7 +68,7 @@ const Navbar: React.FC = () => {
                 <a
                   className="_3cr5 _a6za _53m5 _a746 _a7_l _a7_o _1s6a _ajs5 _8wzg"
                   style={{ color: "rgb(52, 72, 84)" }}
-                  href="#1"
+                  href="/"
                   data-mobile-fontclasses="_a6za"
                   data-mobile-hidden="false"
                   data-ms='{"creative_detail":"igb-sub-nav-getting-started","creative":"link"}'
@@ -77,12 +76,12 @@ const Navbar: React.FC = () => {
                   role="button"
                   id="u_0_d_Ds"
                 >
-                  Goals
+                  Creatives
                 </a>
                 <div className="_9l6t">
                   <a
                     className="_3cr5 _5j3- _53m5 _9aos _1s6a"
-                    href="#1"
+                    href="/"
                     data-ms='{"creative_detail":"subnav_close_mobile_menu","creative":"link"}'
                     rel="noreferrer"
                     role="button"
@@ -106,7 +105,7 @@ const Navbar: React.FC = () => {
               id="u_0_1h_06"
               rel="noreferrer"
             >
-              oda.wervi
+              d.warme
             </a>
             <div
               className="_8g86 _8kis _9o26 _a742"
